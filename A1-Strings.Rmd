@@ -1,0 +1,126 @@
+---
+title: "Assignment 1"
+author: "PLSC 21510/31510"
+date: "Fall 2022"
+output: pdf_document
+---
+
+## Assignment 1 Solutions
+
+- __Assigned__: 30 March 2022
+- __Due__: 6 April 2022
+
+**Instructions**: Answer the questions below. Knit this `.Rmd` document as a pdf and submit the pdf file in Canvas.
+
+Please avoid printing long outputs (like entire dataframes). Your final pdf should be no more than 5 pages.
+
+```{r message = FALSE}
+library(tidyverse)
+library(stringr)
+```
+
+## 1. Strings
+
+#### 1.1
+
+In your own words, describe the difference between the `sep` and `collapse` arguments to `str_c()`.
+
+
+#### 1.2
+
+Use `str_length()` and `str_sub()` to extract the middle character from 
+a string. What will you do if the string has an even number of characters?
+
+```{r}
+# YOUR CODE HERE
+```
+
+
+#### 1.3
+
+What does `str_trim()` do? What is the opposite of `str_trim()`?
+
+- `str_trim()` removes whitespace from the start and the end of the string.
+- `str_pad()` adds whitespace to the start and the end of the string.
+
+#### 1.4
+
+Split up a string like `"apples, pears, bananas"` into individual components.
+      
+```{r}
+# YOUR CODE HERE
+```
+
+#### 1.5
+
+What does splitting with an empty string (`""`) do? Experiment, and then read the documentation.
+      
+      
+## 2. Regex
+
+Use this vector of words:
+
+```{r}
+words <- stringr::words
+```
+
+Write code that prints the **number** of words that:
+
+#### 2.1: Start with a vowel.
+
+```{r}
+# YOUR CODE HERE
+```
+  
+#### 2.4: Start with a consonant. 
+
+(Hint: Think about matching "not"-vowels.)
+  
+```{r}
+# YOUR CODE HERE
+```
+
+#### 2.3: End with `ed`, but not with `eed`.
+  
+```{r}
+# YOUR CODE HERE
+```
+      
+#### 2.4: End with `ing` or `ise`.
+  
+```{r}
+# YOUR CODE HERE
+```
+
+#### 2.5: Start or end with `x`.
+
+```{r}
+# YOUR CODE HERE
+```
+
+#### 2.6: Start with a vowel and end with a consonant.
+
+```{r}
+# YOUR CODE HERE
+```
+
+## 3. Applications
+
+#### 3.1 
+
+The file `transcripts.txt` contains a transcript of the Republican presidential primary debate hosted by Fox News at 9 p.m. on Aug. 6, 2015 in Cleveland, Ohio.
+
+Using your `stringr` and regex skills, parse the file into a dataframe (`df`) with each row representing a "turn of talk." The dataframe should have two columns: 1) speaker, and 2) turn of talk. Remove applause lines. The file `transcript-parsed.csv` shows the final product.
+
+```{r}
+# Here's one way you can read a text file into R. 
+library(readtext)
+df <- readtext("transcript.txt")
+
+
+# YOUR CODE HERE
+
+
+# Show the first 6 rows of your final dataframe.
+kable(head(df))
+```
