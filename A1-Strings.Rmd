@@ -10,7 +10,10 @@ output: pdf_document
 - __Assigned__: 30 March 2022
 - __Due__: 6 April 2022
 
-**Instructions**: Answer the questions below. Knit this `.Rmd` document as a pdf and submit the pdf file in Canvas.
+**Instructions**: 
+First read this [chapter](https://plsc-31101.github.io/course/strings-and-regular-expressions.html). 
+
+Then answer the questions below. Knit this `.Rmd` document as a pdf and submit the pdf file in Canvas.
 
 Please avoid printing long outputs (like entire dataframes). Your final pdf should be no more than 5 pages.
 
@@ -123,4 +126,28 @@ df <- readtext("transcript.txt")
 
 # Show the first 6 rows of your final dataframe.
 kable(head(df))
+```
+
+## Bonus (Extra credit)
+
+In class, we tried to find all sentences that contain a color.
+
+```{r}
+# create regex
+colors <- c("red", "orange", "yellow", "green", "blue", "purple")
+color_match <- str_c(colors, collapse = "|")
+
+# Find sentences with colors
+has_color <- str_subset(sentences, color_match)
+head(has_color)
+
+# Extract the color
+matches <- str_extract(has_color, color_match)
+head(matches)
+```
+
+We noticed that the regular expression matched words like "reared" and "shimmered", which are not colors color. Modify the regex to fix the problem.
+
+```{r}
+# YOUR CODE HERE
 ```
