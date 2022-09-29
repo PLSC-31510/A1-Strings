@@ -7,8 +7,8 @@ output: pdf_document
 
 ## Assignment 1 Solutions
 
-- __Assigned__: 30 March 2022
-- __Due__: 6 April 2022
+- __Assigned__: 29 Sep 2022
+- __Due__: 6 October 2022
 
 **Instructions**: 
 First read this [chapter](https://plsc-31101.github.io/course/strings-and-regular-expressions.html). 
