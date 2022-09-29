@@ -124,8 +124,8 @@ df <- readtext("transcript.txt")
 # YOUR CODE HERE
 
 
-# Show the first 6 rows of your final dataframe.
-kable(head(df))
+# uncomment to test (`tibble` helps with pretty printing)
+head(tibble(df))
 ```
 
 ## Bonus (Extra credit)
