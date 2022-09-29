@@ -43,8 +43,6 @@ a string. What will you do if the string has an even number of characters?
 
 What does `str_trim()` do? What is the opposite of `str_trim()`?
 
-- `str_trim()` removes whitespace from the start and the end of the string.
-- `str_pad()` adds whitespace to the start and the end of the string.
 
 #### 1.4
 
@@ -75,7 +73,7 @@ Write code that prints the **number** of words that:
 # YOUR CODE HERE
 ```
   
-#### 2.4: Start with a consonant. 
+#### 2.2: Start with a consonant. 
 
 (Hint: Think about matching "not"-vowels.)
   
